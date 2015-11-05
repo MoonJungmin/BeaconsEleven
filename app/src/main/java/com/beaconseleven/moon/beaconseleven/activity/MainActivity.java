@@ -15,5 +15,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         testInt = 0;
+        testInt = 2;
     }
 }
