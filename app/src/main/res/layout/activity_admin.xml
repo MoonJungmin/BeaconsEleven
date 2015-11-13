@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.beaconseleven.moon.beaconseleven.activity.AdminActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:background="#ff72c5f1"
+                android:textColor="#ffffff"
+                android:text="전체 작업장 보기"
+                android:id="@+id/btn_mapview"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id = "@+id/btn_find_user"
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:background="#ff72c5f1"
+                android:textColor="#ffffff"
+                android:text="근로자찾기"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:background="#ff72c5f1"
+                android:textColor="#ffffff"
+                android:text="작업장관리"
+
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:background="#ff72c5f1"
+                android:textColor="#ffffff"
+                android:text="근로자호출"
+
+                android:layout_margin="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

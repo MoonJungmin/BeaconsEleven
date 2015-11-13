@@ -1,11 +1,119 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/loginpage"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="132dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="73dp"
+            android:gravity="center"
+            android:weightSum="1"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:text="ID"
+                android:paddingRight="30dp"
+                android:id="@+id/loginpage_txt_id" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:id="@+id/loginpage_edit_id"
+                android:layout_gravity="center_vertical|right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="73dp"
+            android:gravity="center"
+            android:weightSum="1"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:text="PW"
+                android:paddingRight="30dp"
+                android:id="@+id/loginpage_txt_pw" />
+
+            <EditText
+                android:password="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:id="@+id/loginpage_edit_pw"
+                android:layout_gravity="center_vertical|right" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="75dp"
+            android:textColor="#ffffff"
+            android:background="#ff72c5f1"
+            android:text="Login"
+            android:id="@+id/loginpage_btn_login"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mypage"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:background="#ff72c5f1"
+                android:textColor="#ffffff"
+                android:text="관리모드"
+                android:id="@+id/mypage_btn_admin"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:background="#ffcfb79f"
+                android:textColor="#ffffff"
+                android:text="근로자모드"
+                android:id="@+id/mypage_btn_user"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>
