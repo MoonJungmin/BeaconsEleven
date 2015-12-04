@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import com.beaconseleven.moon.beaconseleven.R;
 import com.beaconseleven.moon.beaconseleven.datatype.TypeBeacon;
 import com.beaconseleven.moon.beaconseleven.global.mGlobal;
+import com.beaconseleven.moon.beaconseleven.model.LocateThread;
 import com.beaconseleven.moon.beaconseleven.model.TCP_Socket_Model;
 
 import org.altbeacon.beacon.Beacon;
@@ -31,6 +32,10 @@ public class UserActivity extends Activity implements BeaconConsumer {
     private BeaconManager beaconManager;
     public ImageView mStopImage;
 
+    public boolean StartFlag = false;
+
+    private LocateThread mThread;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +46,9 @@ public class UserActivity extends Activity implements BeaconConsumer {
         beaconManager = BeaconManager.getInstanceForApplication(this);
         beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
         beaconManager.bind(this);
+
+        mThread = new LocateThread(mGlobalVar, this);
+     //   mThread.start();
 
 
         mStopImage.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +99,6 @@ public class UserActivity extends Activity implements BeaconConsumer {
 
                 }
             }
-
         }
     }
 

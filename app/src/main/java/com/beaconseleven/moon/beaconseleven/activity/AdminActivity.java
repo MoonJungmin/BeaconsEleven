@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.beaconseleven.moon.beaconseleven.R;
 import com.beaconseleven.moon.beaconseleven.activity.admin.FindUserAcitivity;
+import com.beaconseleven.moon.beaconseleven.activity.admin.MapViewActivity;
 
 public class AdminActivity extends Activity {
 
@@ -23,6 +24,13 @@ public class AdminActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), FindUserAcitivity.class);
+                startActivity(intent);
+            }
+        });
+        Btn_MapView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MapViewActivity.class);
                 startActivity(intent);
             }
         });

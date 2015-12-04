@@ -11,6 +11,9 @@ public class TypeMember {
     private String mb_id;
     private String mb_mac;
     private String mb_now_task;
+    private String mb_now_pos_x;
+    private String mb_now_pos_y;
+
 
 
     private boolean isLogin = false;
@@ -84,4 +87,21 @@ public class TypeMember {
     public void setMb_now_task(String mb_now_task) {
         this.mb_now_task = mb_now_task;
     }
+
+    public String getMb_now_pos_y() {
+        return mb_now_pos_y;
+    }
+
+    public void setMb_now_pos_y(String mb_now_pos_y) {
+        this.mb_now_pos_y = mb_now_pos_y;
+    }
+
+    public String getMb_now_pos_x() {
+        return mb_now_pos_x;
+    }
+
+    public void setMb_now_pos_x(String mb_now_pos_x) {
+        this.mb_now_pos_x = mb_now_pos_x;
+    }
+
 }
